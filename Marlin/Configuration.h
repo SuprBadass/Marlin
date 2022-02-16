@@ -409,7 +409,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -465,7 +465,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 300
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -514,9 +514,9 @@
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
   	// Creality Ender-3	
-    #define DEFAULT_Kp 21.73	
-    #define DEFAULT_Ki 1.54	
-    #define DEFAULT_Kd 76.55
+    #define DEFAULT_Kp 22.26
+    #define DEFAULT_Ki 1.58
+    #define DEFAULT_Kd 78.19
   #endif
 #endif // PIDTEMP
 
@@ -808,7 +808,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 // Extruder: LDO 42STH40-1004ASR
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.42 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 435.68 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1059,7 +1059,8 @@
  *     O-- FRONT --+
  */
 // #define NOZZLE_TO_PROBE_OFFSET { -42, -10, 0 }
-#define NOZZLE_TO_PROBE_OFFSET { -42, -5, 0 }
+// #define NOZZLE_TO_PROBE_OFFSET { -42, -5, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -46, -5, -0.3 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1201,7 +1202,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
